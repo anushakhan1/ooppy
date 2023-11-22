@@ -1,0 +1,101 @@
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+
+class Dog(Animal):
+    def speak(self):
+        print(f"{self.name} barks")
+
+animal = Animal("Generic Animal")
+dog = Dog("Buddy")
+
+animal.speak()
+dog.speak()
+
+# First base class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+# Second base class
+class Mammal:
+    def give_birth(self):
+        print(f"{self.name} gives birth to live young")
+
+# Derived class inheriting from both Animal and Mammal
+class Dog(Animal, Mammal):
+    def speak(self):
+        print(f"{self.name} barks")
+
+# Creating an instance of the derived class
+dog = Dog("Buddy")
+
+# Calling methods from both base classes and the derived class
+dog.speak()
+dog.give_birth()
+# Base class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+# First derived class
+class Dog(Animal):
+    def bark(self):
+        print(f"{self.name} barks")
+
+# Second derived class
+class Cat(Animal):
+    def meow(self):
+        print(f"{self.name} meows")
+
+# Creating instances of the derived classes
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+# Calling methods from the base class and the derived classes
+dog.speak()
+dog.bark()
+
+cat.speak()
+cat.meow()
+
+# Base class
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        print(f"{self.name} makes a sound")
+
+# Derived class 1
+class Dog(Animal):
+    def bark(self):
+        print(f"{self.name} barks")
+
+# Derived class 2
+class Labrador(Dog):
+    def fetch(self):
+        print(f"{self.name} fetches a ball")
+
+# Creating instances of the derived classes
+dog = Dog("Buddy")
+labrador = Labrador("Max")
+
+# Calling methods from the base class and the derived classes
+dog.speak()
+dog.bark()
+
+labrador.speak()
+labrador.bark()
+labrador.fetch()
